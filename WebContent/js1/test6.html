@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//중첩 if문 
+
+/* if(조건문){
+	if(조건문){
+		
+	}
+}
+ */
+ 
+ // 로그인 로직
+ // 아이디 - O
+ //        -> (비밀번호를 비교하면 된다.) - O => 로그인 성공
+ //										  - x => 비밀번호 오류
+ 
+ 
+ //        - X (비회원이다. -> 회원가입로직)
+
+/*  var userID = "itwill001";
+ var userPW = "1234";
+ 
+ inputID = prompt("아이디를 입력하시오.");
+ inputPW = prompt("비밀번호를 입력하시오.");
+
+ if(userID == inputID){
+	 //회원
+	 if(userPW == inputPW){
+		 alert("환영합니다.")
+	 }else{
+		 alert("비밀번호 오류");
+		 location.reload();
+	 }
+ }else{
+	 //alert("비회원 입니다. 회원가입 하시겠습니까?"); // 확인 버튼만 나온다.
+	 confirm("비회원 입니다. 회원가입 하시겠습니까?"); // 확인, 취소 버튼 둘 다 나온다.
+	 location.reload();
+
+ } */
+ 
+ //선택문 (switch - case 문)
+ 
+/*  switch(비교대상(변수))
+ 	case value:
+ 		실행문;
+ 		break;
+ 	case value:
+ 		실행문;
+ 		break;
+ 	case value:
+ 		실행문;
+ 		break; 		
+ 	default:
+ 		break;
+ 		} */
+ 		
+ // 해당 케이스를 만나서 실행 후 break 구문을 실행 했을 때 종료
+ // default 구문을 실행 후 종료
+ // 해당 케이스를 만나서 실행 후 break구문을 실행안하는 경우
+ // 다음 케이스를 모두 실행(케이스 해당여부 상관X) 다음 Break구문을 찾을 때 까지
+ 		
+ 
+/*  var num = prompt();
+ switch(num){
+ case "hello":
+	 alert("정답! - hello");
+	 break;
+ case "9":
+	 alert("정답! - 9");
+	 break;
+ case "8":
+	 alert("정답! - 8");
+	 break;
+ case "7":
+	 alert("정답! - 7");
+	 break;
+ case "6":
+	 alert("정답! - 6");
+	 break;
+ case "5":
+	 alert("정답! - 5");
+	 break;
+ default:
+	 alert("해당사항 없음 !")
+ } */
+ 
+ //학생의 성적처리 프로그램
+ //90 ~ 100 A
+ //80 ~ 89 B
+ //70 ~ 79 C
+ //60 ~ 69 D
+ //0 ~ 59 F
+ 
+ var score = prompt();
+ var tmp = Math.floor(score/10);
+ 
+ var grade;
+ switch(tmp){
+ case 10:
+ case 9:
+	 grade="A";
+	 break;
+ case 8:
+	 grade="B";
+	 break;
+ case 7:
+	 grade="C";
+	 break;
+ case 6:
+	 grade="D";
+	 break;
+ default:
+	 grade="D";
+ }
+ alert(grade); 
+ 
+ 
+</script>
+
+</head>
+<body>
+
+<h1>WebContent/js1/test6.html</h1>
+
+</body>
+</html>

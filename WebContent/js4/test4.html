@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	function fun1() {
+		// select 태그 자체 속성 확인
+		// document.폼태그.select이름.속성
+		
+		alert("name : " +document.fr.subject.name);
+		//alert("name : "+document.fr.options[0].value);
+		alert("legth : " +document.fr.subject.length);
+		alert("type : " +document.fr.subject.type);
+		alert("selectedIndex : " + document.fr.subject.selectedIndex);
+	} // fun1()
+
+	function fun2() {
+		// select 선택지의 속성
+		// document.폼태그.select이름.options[0].속성
+		
+		alert("value : " +document.fr.subject.options[1].value);
+		alert("text : " +document.fr.subject.options[1].text);
+		alert("selected : " +document.fr.subject.options[1].selected);
+	} // fun2()
+	
+	function fun3() {
+			if(document.fr.subject.value.length > 0){
+			alert("정보가 들어왔습니다.");
+			document.fr.submit();
+			return;
+		} // if
+	} // fun3()
+	
+	// select의 과목을 선택했을 때 선택한 과목의 이름을 출력(aert)
+	// ""
+	function fun4() {
+			var idx = document.fr.subject.selectedIndex;
+			alert(doucument.fr.subject.options[idx].text+"이 선택되었습니다.");
+		}
+	
+</script>
+</head>
+<body>
+
+	<h1>WebContent/js4/test4.html</h1>
+
+	<fieldset>
+		<form action="" name="fr">
+		 과목을 선택하시오.
+		 <!--  size="3" multiple="multiple" -->
+		 <select name="subject" onchange="fun4()">
+		 	<option value="" name="op">선택하시오</option>     <!-- options[0] -->
+		 	<option value="java"  name="op">자바</option>       <!-- options[1] -->
+		 	<option value="web"  name="op">웹</option>          <!-- options[2] -->
+		 	<option value="js"  name="op">자바스크립트</option> <!-- options[3] -->
+		 	<option value="db"  name="op">디비</option>         <!-- options[4] -->
+		 </select>
+		 
+		 <input type="submit" value="전송(submit)">
+		 
+		 <hr>
+		 
+		 <input type="button" value="select 속성 확인하기" onclick="fun1()">
+	 	 <input type="button" value="select 속성 확인하기2" onclick="fun2()">
+		 
+		 <hr>
+		 
+		 <!-- select 선택이 안된 경우 페이지 이동x,
+		 과목 선택 된 경우 페이지 이동 후 정보 전달.
+		  -->
+		 <input type="button" value="데이터 선택 후 페이지 이동" onclick="fun3()">
+		 
+		</form>
+	</fieldset>
+</body>
+</html>

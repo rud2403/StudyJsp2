@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	// 날짜(Date) 객체
+	
+	// 객체 생성
+	//new Date(); // 현재 시스템의 시간정보 + 날짜정보를 가지고 있다.
+	
+	// 객체 생성 및 참조변수
+	/* var t = new Date();
+	
+	document.write(t + "<br>");
+	
+	
+	document.write(t.getFullYear()+"년 ");
+	document.write((t.getMonth()+1)+"월 "); //0~11월로 보여주기 때문에 +1 해줘야한다.
+	//document.write(t.getDay()+"일 "); //요일정보 (일 : 0 ~ 토 : 6)
+	document.write(t.getDate()+"일 "); 
+	
+	document.write(t.getHours()+"시");
+	document.write(t.getMinutes()+"분");
+	document.write(t.getSeconds()+"초");
+	
+	document.write("<hr>");
+	
+	var d1 = new Date(2021, 3, 11); // 년, 월-1, 일
+
+	document.write(d1+"<hr>");
+	document.write(d1.getMonth());
+
+	var d2 = new Date("2021/3/11"); //년, 월, 일
+	document.write(d2+"<hr>");
+	
+	var d3 = new Date(2021, 2, 11, 11, 00, 00); //년, 월-1, 일, 시, 분, 초
+	document.write(d3 + "<hr>");
+	
+	// 2002년 월드컵 -> 개막일의 요일
+	
+	var d4 = new Date("2002/5/31");
+	
+	document.write(d4 + "<hr>");
+	
+	//switch문을 이용한 요일 숫자 -> 문자
+	
+	
+	//요일을 계산하는 함수를 생성
+	function MyDay(day) {
+		var result = "";
+		switch(d4.getDay()){
+		case 0:
+			result = "일";
+			break;
+		case 1:
+			result = "월";
+			break;
+		case 2:
+			result = "화";
+			break;
+		case 3:
+			result = "수";
+			break;
+		case 4:
+			result = "목";
+			break;
+		case 5:
+			result = "금";
+			break;
+		case 6:
+			result = "토";
+			break;
+			
+		}
+		return result;
+	}
+	document.write("개막일은 "+ MyDay(day2002.getDay()) +"요일 입니다. <hr>"); */
+	
+	// 2021/3/11(목) 11:38:00초 (현재 시간정보 사용)
+	
+	var d5 = new Date();
+	
+	
+	
+	document.write(d5.getFullYear() + "/");
+	document.write((d5.getMonth()+1) + "/");
+	document.write(d5.getDate()+"(" + MyDay(d5.getDay()) + ")");
+	document.write(d5.getDate()+"(" + MyDay(d5.getDay()) + ")");
+	document.write(d5.getDate()+"(" + MyDay(d5.getDay()) + ")");
+	
+
+
+	
+
+	
+	
+	
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	//무한 반복문
+	// => 찾고자하는 답을 계속해서 찾아야할 때 사용
+
+	/* for( ; ; ){
+	 document.write("무한 루프!");
+	 }
+
+	 while(true){
+	
+	
+	 }
+	 do{
+	
+	 }while(true); */
+
+	// 보조 제어문 : break문, continue문
+	//break문 : 가장 가까운 반복문 하나를 탈출
+	/* 	for (var i = 1; i <= 10; i++) {
+	 if (i == 3) {
+	 break; // => 종료
+	 }
+	 document.write(i + "  ");
+	 }
+	 document.write("<hr>");
+
+	 for (var i = 1; i <= 10; i++) {
+	 if (i == 3) {
+	 continue; // => 한 단계 스킵
+	 }
+	 document.write(i + "  ");
+	 }
+
+	 // 중첩 for(2중 for)문
+
+	 for (초기식; 조건식; 증감식) {
+	 실행코드;
+	 for (초기식; 조건식; 증감식) {
+	 실행코드;
+	 }
+	 실행코드
+	 } */
+
+	/* 	for(i=1;i<=5;i++){
+	 for(j=1;j<=5;j++){
+	 document.write("i = " + i + "  j = " + j + "<br>");
+	 }
+	 document.write("<hr>");
+
+	 } */
+
+	//구구단 
+	//2단 ~ 9단
+	//[2단]
+	// 2 * 1 = 2
+	// ...
+	// 2 * 9 = 18
+	//[3단]
+	// 3 * 1 = 3
+	// ...
+	// 3 * 9 = 27
+	// ...
+	// [9단]
+	// ...
+	// 9 * 9 = 81
+	/* for(i = 2 ; i <= 9 ; i++){
+		document.write("[ " + i +  "단]" + "<br>");
+		for(j = 1 ; j <= 9 ; j++){
+			document.write(i + "x" + j + "=" + i*j + "<br>" + "<br>");
+		}
+	} */
+
+	// 별 그리기
+	//1단계
+	/* 
+	
+	 *
+	 *
+	 *
+	 *
+	 *
+	
+	 */
+	/* 	for (i = 0; i <= 4; i++) {
+	 for (j = 0; j <= 4; j++) {
+	 document.write("*");
+	 }
+	 document.write("<br>");
+	 } */
+
+	/* 	for(i = 0 ; i <= 4 ; i++ ){
+	 for(j = 0 ; j <= i - 1 ; j++ ){
+	 document.write("*");
+	 }
+	 document.write("* <br>");
+
+	 } */
+
+	/* 	for(i = 0 ; i <= 4 ; i++ ){
+	 for(j = 4 ; j >= i ; j-- ){
+	 document.write("*");
+	 }
+	 document.write("<br>");
+	 }
+	 */
+
+	/* 	 	document.write("<table border="1">");
+	 for (i = 0; i <= 4; i++) {
+	 document.write(" <tr>");
+
+	 for (j = i + 1; j <= i + 3; j++) {
+	 document.write("<td>" + j + "   " + "</td>");
+	 }
+	 document.write("</tr><br>");
+	 document.write("</table>");
+	 } */
+
+	var t = "<table border='1'>";
+	var num = 1;
+
+	for (var i = 0; i < 5; i++) {
+		t += "<tr>";
+		for(var j=0;j<3;j++){
+			t += "<td>"+num+"</td>";
+			num++;
+		}
+		t += "</tr>";
+	}
+
+	t += "</table>";
+</script>
+</head>
+<body>
+
+
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	// 자바스크립트는 객체 기반의 언어이다.
+	// 객체(Object) : 내 눈앞에 보이는 모든 대상
+	// => 객체 추상화(구체화) : 내가 객체로 프로그래밍에서 사용할 대상들을 선택
+	// => 객체 정보를 정의 : 객체의 기능(메소드 - 함수) / 객체의 속성(변수)
+	// => 객체를 생성 후 사용(메모리에 올린다(로드))
+	
+	// ex) TV (Object)
+	// 기능 : 전원 on/off, 소리 UP / DOWN, 채널 UP / DOWN
+	// 속성 : 크기, 색상, 브랜드, 화질, 가격,...
+	
+	// new 연산자 : 객체를 생성하는 연산 (객체를 메모리에 올리는 작업 = 인스턴스화)
+	// 생성자 : 객체를 만들 때 객체의 속성(변수)을 초기화하는 함수
+	//		  : 함수의 첫글자가 대문자(=> 객체), 객체명()
+	
+	
+	// 객체 생성시 참조변수(인스턴스명, 객체변수)에는 객체의 주소가 저장
+	
+/* 	var TV = new Object(); // 아직은 옵션이 없는 TV 객체를 하나 만든다.
+	
+	TV.size = 50; // TV의 size 속성을 정해준다.
+	TV.price = 200;// TV의 price 속성을 정해준다.
+	
+	//TV의 속성값을 출력한다.
+	document.write("티비의 크기는 " + TV.size + "인치 입니다. <br>");
+	document.write("티비의 가격은 " + TV.price + "만원 입니다.<br>");
+	
+	
+	
+	// * 객체 생성시 참조변수에 객체의 주소(메모리)를 저장
+	// * 객체는 new 연산자를 사용할 때 마다 새로운 메모리 공간에 생성된다.
+	//   (메모리 주소를 다르게 사용 = 참조 변수의 값이 다르다.)
+	
+	
+	var LGTV = new Object();
+	
+	LGTV.size = 100;
+	LGTV.price = 300;
+	
+	var LGTV1 = new Object();
+	
+	LGTV.size = 100;
+	LGTV.price = 300;
+	
+	LGTV1.off = function() {
+		document.write("전원 off <br>");
+	}
+	
+	LGTV1.on = function() {
+		document.write("전원 on <br>");
+	}
+	
+	document.write("티비의 크기는 " + LGTV.size + "인치 입니다. <br>");
+	document.write("티비의 가격은 " + LGTV.price + "만원 입니다.<br>");
+	
+	LGTV1.off();
+	LGTV1.on(); */
+
+
+	
+	// 스마트폰(phone)
+	// 속성 : 브랜드(brand), 모델명(model), 색상(color), 가격(price)
+	// 기능 : 전원 On/Off(), 통화()
+	
+	// 2개의 스마트폰을 사용해서 통화를 하는 동작을 구현
+	
+	//스마트폰1의 속성 값 설정
+	var phone1 = new Object();
+	phone1.brand = "SAMSUNG";
+	phone1.model = "S20";
+	phone1.color = "BLACK";
+	phone1.price = 100;
+	
+	phone1.on = function() {
+		document.write("phone1 전원 On <br>");
+	} // 스마트폰의 기능으로 함수 저장.(전원 On)
+	
+	phone1.off = function() {
+		document.write("phone1 전원 Off <br>");
+	} // 스마트폰의 기능으로 함수 저장.(전원 Off)
+	
+	phone1.call = function() {
+		document.write("phone1 통화 거는중 <br>")
+	} // 스마트폰의 기능으로 함수 저장.(통화)
+	
+	//스마트폰2의 속성 값 설정
+	var phone2 = new Object();
+	phone2.brand = "APPLE";
+	phone2.model = "I-PHONE11";
+	phone2.color = "WHITE";
+	phone2.price = 150;
+	
+	phone2.on = function() {
+		document.write("phone2 전원 On <br>");
+	} // 스마트폰의 기능으로 함수 저장.(전원 On)
+	
+	phone2.off = function() {
+		document.write("phone2 전원 Off <br>");
+	} // 스마트폰의 기능으로 함수 저장.(전원 Off)
+	
+	phone2.call = function() {
+		document.write("phone2 통화 받는중 <br>");
+	} // 스마트폰의 기능으로 함수 저장.(통화)
+	
+	// 스마트폰1, 스마트폰2의 속성값 출력
+	document.write("Phone1의 브랜드는 " + phone1.brand + "입니다. <br>");
+	document.write("Phone1의 모델은 " + phone1.model + "입니다. <br>");
+	document.write("Phone1의 가격은 " + phone1.price + "입니다. <br>");
+	document.write("Phone1의 색상은 " + phone1.color + "입니다. <br>");
+	document.write("Phone2의 브랜드는 " + phone2.brand + "입니다. <br>");
+	document.write("Phone2의 모델은 " + phone2.model + "입니다. <br>");
+	document.write("Phone2의 가격은 " + phone2.price + "입니다. <br>");
+	document.write("Phone2의 색상은 " + phone2.color + "입니다. <br>");
+
+	
+	//스마트폰1, 스마트폰2의 함수
+	phone1.on();
+	phone2.on();
+
+	phone1.call();
+	phone2.call();
+	
+	phone1.off();
+	phone2.off();
+	
+	// 자바스크립트
+	// - 내장객체
+	// => 자바스크립트에 내장돼 있는 객체들(문자(String), 날짜(Date), 배열(Array), 수학(Math), ...)
+	
+	// - 브라우저 객체 모델(BOM : Browser Object Model)
+	// => 브라우저에 내장돼 있는 객체들 (document, window, screen, location, history, navigator, ... )
+	
+	// - 문서 객체 모델(DOM : Document Object Model)
+	// => HTML 코드로 구성되어있는 객체
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

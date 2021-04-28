@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//반복문 : 코드를 반복하기 위해서 사용하는 문장
+//for, while, do-while
+	
+/* 	for(초기식;조건식;증감식){
+		반복할 실행문;
+	} */
+
+//안녕하세요 5번 출력
+/* for(i = 0 ; i < 5 ; i++){
+	document.write("안녕하세요 !" + "<br>")
+}
+document.write("<hr>");
+	
+for(num = 1 ; num < 11 ; num++){
+document.write(num + " ");
+}
+document.write("<hr>"); */
+
+//11~25 숫자를 가로 출력
+
+
+/* for(x = 11 ; x < 26 ; x++ ){
+	document.write(x + "  ");
+}
+document.write("<hr>"); */
+
+
+//1 ~ 10까지 숫자 중에서 홀수만 출력
+/* for(y = 1 ; y < 10 ; y = y + 2){
+	document.write(y + "  ");
+}
+document.write("<hr>");
+
+//짝수 출력
+
+for(y = 2 ; y < 11 ; y = y + 2){
+	document.write(y + "  ");
+}
+document.write("<hr>");
+
+//10 ~1
+for(y = 10 ; y > 0 ; y = y - 1){
+	document.write(y + "  ");
+}
+document.write("<hr>");
+
+//구구단
+
+//[2단]
+//2 * 1 = 2
+//2 * 2 = 4
+// ...
+//2 * 9 =18
+for(x = 2 ; x < 10 ; x++ ){
+	document.write("[ " + x + "단 ]" +"<br>");
+	for(y = 1 ; y < 10 ; y++){
+		document.write(x + " x " + y  + " = "  + x*y + "<br>");
+	}
+document.write("<br>");
+
+}
+document.write("<br>");
+
+//누적 합
+//1 ~ 10 까지의 숫자 합을 출력
+var x = 0;
+for(var i = 1 ; i < 11 ; i++ ){
+	x = x + i
+	document.write("i = " + i + ", sum = " + x + "<br>");
+
+}
+document.write(x); */
+
+
+/* //while 반복문
+초기식;
+while(조건식){
+	반복실행문;
+	증감식
+} */
+
+//1 ~ 10까지 숫자 출력
+
+/* var i = 0;
+while(i < 10){
+	i++
+	document.write(i);
+} */
+
+//while문 사용 1~100까지 숫자의 합을 출력
+/* var i = 0
+while(i < 100){	
+	i++
+	document.write(i + "   ");
+	if(i % 10 == 0){
+	document.write("<br>");
+	}
+} */
+
+/* // do-while 반복문
+초기식;
+do{
+	반복할 코드;
+	증감식;
+}while(조건식); */
+
+/* var i = 1;
+do{
+	document.write(i+ "   ");
+	i++;
+}while(i<=10); */
+
+/* for(var i = 0; i < 5; i++)
+{
+	document.write(i);	
+} */
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

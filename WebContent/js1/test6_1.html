@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+//사용자가 "네이버", "다음", "구글", "네이트".. 입력시 해당 페이지로 이동 (한글, 영어 모두 가능)
+
+var site = prompt("이동하고 싶은 페이지 명을 입력하세요.");
+var url = "";
+switch(site){
+ case "naver":
+ case "NAVER":
+ case "네이버":
+	url="http://www.naver.com";
+	break;
+ case "daum":
+ case "DAUM":
+ case "다음":
+	 url="http://www.daum.com";
+	break;
+ case "kakao":
+ case "KAKAO":
+ case "카카오":
+	 url="http://www.kakaocorp.com";
+	break;
+ case "google":
+ case "GOOGLE":
+ case "구글":
+	 url="http://www.google.com";
+	break;
+ case "nate":
+ case "NATE":
+ case "네이트":
+	 url="http://www.nate.com";
+	break;
+	default:
+	alert("해당페이지는 지원하지 않습니다.");
+}
+if(url){
+location.href=url;
+}
+</script>
+</head>
+<body>
+
+</body>
+</html>

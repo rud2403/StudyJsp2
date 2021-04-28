@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+	//이벤트 : 브라우저에서 클라이언트가 취하는 모든 동작을 이벤트라고 한다.
+	//이벤트 핸들러 : 이벤트가 발생했을 때 코드를 실행해주는 형태
+	//이벤트 핸들러는 이벤트 발생시 JS함수를 실행할 수 있다.
+	
+	function itwill() {
+		alert("아이티윌 !!!");
+		
+	}
+	
+</script>
+
+
+</head>
+<body>
+<h1>WebContent/js3/test1.html</h1>
+
+<input type = "button" value="버튼" onclick="alert('클릭!');">
+<button onclick="alert('클릭!');">버튼!</button>
+<button id="btn">버튼!</button>
+<!-- 추가 버튼 생성 후 itwill() 호출 -->
+<button onclick="itwill()">버튼@</button>
+<input type = "button" value="더블클릭!" ondblclick="console.log('더블 클릭!');">
+<!-- 동일한 이벤트는 동시에 2개 이상 사용 X -->
+
+<input type = "button" value="2개 이상 이벤트 사용하기" 
+ondblclick="alert('이벤트 3')" onclick="alert('이벤트2')"
+onmouseover="alert('이벤트 5')">
+
+<input type="text" onkeyup ="alert('이벤트4')">
+
+
+
+<script type="text/javascript">
+	document.getElementById("btn").onclick = function(){
+		alert("자바스크립트 실행!");
+	}
+	</script>
+	
+	<hr>
+	<table border="1">
+	<tr bgcolor="red" onmouseover="style.background='blue'" onmouseleave="style.background='red'">
+		<td>1</td>
+		<td>2</td>
+		<td>3</td>
+	</tr>
+	<tr bgcolor="orange" onmouseover="style.background='brown'" onmouseleave="style.background='orange'">
+		<td>1</td>
+		<td>2</td>
+		<td>3</td>
+	</tr>
+	<tr bgcolor="yellow" onmouseover="style.background='grey'" onmouseleave="style.background='yellow'">
+		<td>1</td>
+		<td>2</td>
+		<td>3</td>
+	</tr>
+	<tr bgcolor="green" onmouseover="style.background='black'" onmouseleave="style.background='green'">
+		<td>1</td>
+		<td>2</td>
+		<td>3</td>
+	</tr>
+	</table>
+	
+	
+</body>
+</html>
