@@ -184,3 +184,26 @@
 	 4            2-2답글            2              1				 2
 	 5            2-3답글            2              1                3
 	 6           2-3-1답글           
+	 
+	 
+ ---------------------------------------------------------------------------------------------
+ 파일 업로드 / 다운로드 p305 ~
+ 
+ * 파일은 내 컴퓨터(서버 컴퓨터)의 HDD에 저장된다.
+ 
+ 
+ (가상경로 - 외부에서 접근가능한 폴더)
+ C:\workspace_jsp2\StudyJSP2\WebContent\upload
+ 
+ (실제경로 - 외부에선 접근이 불가능한 폴더)
+ C:\workspace_jsp2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\StudyJSP2\upload
+ 
+ 
+ MultipartRequest multi = new MultipartRequest(		
+ 	request, => jsp 내장객체 (파라미터)
+	path, => 실제 파일이 저장될 위치
+	maxSize, => 파일의 크기
+	"UTF-8", => 파일 업로드시 인코딩
+	new DefaultFileRenamePolicy() => 파일이름 중복처리 객체
+ );
+	 

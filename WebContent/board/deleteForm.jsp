@@ -16,7 +16,7 @@
 		
 	%>
 	
-	<form action="deletePro.jsp?pageNum=<%=pageNum %>" method="post">
+	<form action="deletePro.jsp?pageNum=<%=pageNum%>" method="post">
 		<input type="hidden" name="num" value="<%=num%>">
 		비밀번호 : <input type="text" name="pass">
 		<hr>

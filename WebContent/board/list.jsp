@@ -26,7 +26,7 @@
 	// 게시판 페이징 처리 : DB에서 원하는 만큼만 글 가져오기
 	
 	// 한페이지당 보여줄 글의 개수
-	int pageSize = 3;
+	int pageSize = 10;
 	
 	// 지금 페이지가 몇 페이지인지 확인
 	String pageNum = request.getParameter("pageNum");
@@ -74,7 +74,17 @@
 		<tr>
 			<td><%=bb.getNum() %></td>
 			<td>
-			<a href="content.jsp?num=<%=bb.getNum()%>&pageNum=<%=pageNum%>"><%=bb.getSubject() %></a>
+			<%
+				int wid = 0;
+				if(bb.getRe_lev() > 0){
+				wid = 10 * bb.getRe_lev(); 
+			%>
+			  <img alt="" src="level.gif" height="15" width="<%=wid%>">
+ 			 <img alt="" src="re.gif">
+			<%
+				}
+			%>
+			 <a href="content.jsp?num=<%=bb.getNum()%>&pageNum=<%=pageNum%>"><%=bb.getSubject() %></a>
 			</td>
 			<td><%=bb.getName() %></td>
 			<td><%=bb.getDate() %></td>

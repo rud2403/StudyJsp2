@@ -563,5 +563,82 @@ public class BoardDAO {
 		return check;
 	} // deleteBoard(BoardBean bb)
 	
+	public void reInsertBoard(BoardBean bb){
+		int num = 0;
+
+		
+		try {
+			// 1) 답글 작성 번호 (num)계산
+			
+			// 1,2 디비연결
+			conn = getConnection();
+			
+			// 3 sql 구문 & pstmt 객체
+			sql = "select max(num) from itwill_board";
+
+			pstmt = conn.prepareStatement(sql);
+			
+			// 4 sql 실행
+			rs = pstmt.executeQuery();
+			
+			// 5 데이터 처리
+			if(rs.next()){
+				num = rs.getInt(1) + 1; // 인덱스 번호로 접근
+				
+			}
+			
+			System.out.println(" 답글 번호 계산 완료 : " + num);
+			
+			// 2) 답글의 순서 재배치 (정렬)
+			// -> re_ref(같은 그룹)안에서 re_seq(순서)를 정렬
+			//				"			  기존의 순서 값 보다 큰 값이 있으면 순서를 1 증가
+			sql = "update itwill_board set re_seq = re_seq+1 where re_ref=? and re_seq>?";
+			
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, bb.getRe_ref());
+			pstmt.setInt(2, bb.getRe_seq());
+			
+			// sql 실행
+			
+			pstmt.executeUpdate();
+			
+			System.out.println(" 답글 정렬 완료 ");
+			
+			// 3) 답글 쓰기 
+			sql = "insert into itwill_board(num,name,pass,subject,content,readcount,re_ref,re_lev,re_seq,date,ip,file) "
+					+ "values(?,?,?,?,?,?,?,?,?,now(),?,?)";
+			
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, num);
+			pstmt.setString(2, bb.getName());
+			pstmt.setString(3, bb.getPass());
+			pstmt.setString(4, bb.getSubject());
+			pstmt.setString(5, bb.getContent());
+			pstmt.setInt(6, bb.getReadcount());
+			pstmt.setInt(7, bb.getRe_ref()); // re_ref 원글의 그룹번호 사용
+			pstmt.setInt(8, bb.getRe_lev()+1); // re_lev + 1
+			pstmt.setInt(9, bb.getRe_seq()+1); // re_seq + 1
+			pstmt.setString(10,bb.getIp());
+			pstmt.setString(11, bb.getFile());
+			
+			// sql 실행
+			pstmt.executeUpdate();
+			System.out.println(" 답글 작성완료! ");
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally{
+			closeDB();
+		}
+		
+
+		
+		
+		
+		
+	}
 	
 } // class BoardDAO
