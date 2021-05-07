@@ -1,3 +1,4 @@
+<%@page import="org.apache.catalina.Realm"%>
 <%@page import="com.itwillbs.board.BoardBean"%>
 <%@page import="com.itwillbs.board.BoardDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -53,7 +54,7 @@
 		</tr>
 		<tr>
 			<td>첨부파일</td>
-			<td colspan="3"><%=bb.getFile() %></td>								
+			<td colspan="3"><a href="../upload/<%=bb.getFile() %>"><%=bb.getFile() %></a></td>								
 		</tr>
 		<tr>
 			<td>글내용</td>

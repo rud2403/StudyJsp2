@@ -38,7 +38,10 @@
 	String subject = multi.getParameter("subject");
 	//String filename = multi.getParameter("filename");
 	
+	// 서버에 올라가는 파일의 이름(중복처리)
 	String filename = multi.getFilesystemName("filename");
+	
+	// 서버에 올라가는 파일이름 X 파일자체의 이름
 	String oFileName = multi.getOriginalFileName("filename");
 
 	
@@ -49,6 +52,18 @@
 	파일 : <%=filename %><br>
 	파일(원본) : <%=oFileName %><br>
 
+	<hr>
+	
+	<form name="fr" action="uploadCheck.jsp" method="post">
+		<input type="hidden" name="name" value="<%=name %>">
+		<input type="hidden" name="subject" value="<%=subject %>">
+		<input type="hidden" name="filename" value="<%=filename %>">
+		<input type="hidden" name="oFileName" value="<%=oFileName %>">		
+		
+		<!-- <input type="submit" value="전달하기"> -->
+	</form>
+
+	<a href="javascript:fr.submit();">업로드 확인 페이지로 이동</a>
 	
 </body>
 </html>

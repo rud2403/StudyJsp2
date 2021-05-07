@@ -27,7 +27,7 @@
 	%>
 	<h2>회원탈퇴(삭제)</h2>
 
-	<form action="deletePro.jsp" method="post">
+	<form action="deletePro.jsp" method="get">
 		<input type="hidden" name="id" value="<%=id%>">
 		비밀번호 : <input type="password" name="pw"><br>
 		

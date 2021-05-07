@@ -561,7 +561,8 @@ public class BoardDAO {
 
 		
 		return check;
-	} // deleteBoard(BoardBean bb)
+	}
+	// deleteBoard(BoardBean bb)
 	
 	public void reInsertBoard(BoardBean bb){
 		int num = 0;
@@ -635,10 +636,6 @@ public class BoardDAO {
 		}
 		
 
-		
-		
-		
-		
 	}
 	
 } // class BoardDAO

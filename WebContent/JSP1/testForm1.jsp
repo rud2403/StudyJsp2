@@ -7,15 +7,28 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>WebContent/JSP1/testForm1.jsp</h1>
 		
-	<fieldset>
-		<legend> 정보입력 </legend>
+	<fieldset style="width: 350px;">
+		<legend> 로그인(본인이름ㅇㅇㅇ) </legend>
 		<form action="testPro1.jsp" method="get">
-			숫자 입력 : <input type="text" name="num">
-			<input type="submit" value="전송">
+			<table border="1">
+				<tr>
+					<td>아이디</td>
+					<td><input type="text"></td>				
+					<td rowspan="2">
+						<input type="submit" value="로그인">
+					</td>				
+					
+				</tr>
+				<tr>
+					<td>비밀번호</td>
+					<td><input type="text"></td>	
+				</tr>
+							
+			</table>
 		</form>
 	</fieldset>
+
 
 
 </body>
