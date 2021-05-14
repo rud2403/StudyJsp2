@@ -450,8 +450,10 @@ public class BoardDAO {
 		return bb;
 		
 
-	} // getBoard(int num)
+	}
+	// getBoard(int num) 끝
 	
+	// updateBoard(BoardBean bb) 시작
 	public int updateBoard(BoardBean bb){
 		
 		int check = -1;
@@ -510,13 +512,14 @@ public class BoardDAO {
 			e.printStackTrace();
 		}finally{
 			closeDB();
-		}
-		
-
+		}		
 		return check;
 		
-	} // updateBoard(BoardBean bb)
+	}
+	// updateBoard(BoardBean bb) 끝
 	
+	
+	// deleteBoard(BoardBean bb) 시작
 	public int deleteBoard(BoardBean bb){
 		int check = -1;
 		
@@ -562,7 +565,8 @@ public class BoardDAO {
 		
 		return check;
 	}
-	// deleteBoard(BoardBean bb)
+	// deleteBoard(BoardBean bb) 끝
+	
 	
 	public void reInsertBoard(BoardBean bb){
 		int num = 0;

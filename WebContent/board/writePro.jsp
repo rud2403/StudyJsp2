@@ -22,9 +22,7 @@
 		<jsp:useBean id="bb" class="com.itwillbs.board.BoardBean"></jsp:useBean>
 		<jsp:setProperty property="*" name="bb"/>
 		
-	<%
-		System.out.println("글쓰기 정보 : " + bb.toString());	
-	
+	<%	
 		// ip정보 추가
 		bb.setIp(request.getRemoteAddr());
 		

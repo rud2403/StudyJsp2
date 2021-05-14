@@ -13,6 +13,7 @@
 
 	<h1>WebContent/board/content.jsp</h1>
 	<%
+
 		// 페이지 이동 시 전달정보가 있으면 항상 먼저 저장
 		// num, pageNum
 		
@@ -31,7 +32,7 @@
 		
 		//DB에서 글 번호(null)에 해당하는 글 정보를 모두 가져와서 출력
 		BoardBean bb = bdao.getBoard(num);
-	
+
 	%>
 	
 	<table border="1">
